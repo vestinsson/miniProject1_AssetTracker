@@ -65,11 +65,6 @@ namespace AssetTracking_Mini_Project_1
                 string brand = GetValidInput("Enter brand: ", input => !string.IsNullOrWhiteSpace(input));
                 string model = GetValidInput("Enter model: ", input => !string.IsNullOrWhiteSpace(input));
                 string countryName = GetValidInput("Enter country: ", input => !string.IsNullOrWhiteSpace(input));
-
-                //string countryCurrency = GetValidInput("Enter country's currency (USD/EUR/SEK): ",
-                //    input => input.Equals("USD", StringComparison.OrdinalIgnoreCase) ||
-                //             input.Equals("EUR", StringComparison.OrdinalIgnoreCase) ||
-                //             input.Equals("SEK", StringComparison.OrdinalIgnoreCase));
                
                 string countryCurrency = "";
                 switch (countryName.ToUpper())
@@ -157,10 +152,6 @@ namespace AssetTracking_Mini_Project_1
         // sample data for testing purposes
         private void AddSampleAssets()
         {
-            //tracker.AddAsset(new Computer("Dell", "XPS", new Country("USA", "USD"), DateTime.Now.AddMonths(-20), new Price(1200, "USD")));
-            //tracker.AddAsset(new Phone("Apple", "iPhone 12", new Country("Sweden", "SEK"), DateTime.Now.AddMonths(-90), new Price(1000, "USD")));
-            //tracker.AddAsset(new Computer("Lenovo", "ThinkPad", new Country("Germany", "EUR"), DateTime.Now.AddMonths(-35), new Price(1500, "EUR")));
-            //tracker.AddAsset(new Phone("Samsung", "Galaxy S21", new Country("USA", "USD"), DateTime.Now.AddMonths(-5), new Price(800, "USD")));
 
             tracker.AddAsset(new Phone("Apple", "iPhone", new Country("USA", "USD"), DateTime.Now.AddMonths(-33), new Price(800, "USD")));
             tracker.AddAsset(new Phone("Apple", "iPhone", new Country("USA", "USD"), DateTime.Now.AddMonths(-30), new Price(800, "USD")));
@@ -174,7 +165,6 @@ namespace AssetTracking_Mini_Project_1
             tracker.AddAsset(new Phone("apple", "iPhone", new Country("Sweden", "usd"), DateTime.Now.AddMonths(-95), new Price(8500, "sek")));
             tracker.AddAsset(new Phone("apple", "iPhone", new Country("Sweden", "usd"), DateTime.Now.AddMonths(-36), new Price(8500, "sek")));
             tracker.AddAsset(new Phone("apple", "iPhone", new Country("Sweden", "usd"), DateTime.Now.AddMonths(-15), new Price(8500, "sek")));
-
 
         }
     }

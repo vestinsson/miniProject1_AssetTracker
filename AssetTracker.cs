@@ -34,8 +34,6 @@ namespace AssetTracking_Mini_Project_1
                               "Purchase Date".PadRight(20) +
                               "Price (USD)".PadRight(15) +
                               "Currency".PadRight(10) +
-                              //"Purchase Price".PadRight(15) + 
-                              //"Current Value".PadRight(15) + 
                               "Current Value (Local)".PadRight(20) 
                               );
 
@@ -57,9 +55,7 @@ namespace AssetTracking_Mini_Project_1
                                   $"{asset.PurchaseDate.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture).PadRight(20)}" +
                                   $"{asset.PurchasePrice.GetAmountInUSD().ToString("F2", CultureInfo.InvariantCulture)} USD".PadRight(15) +
                                   $"{asset.Country.Currency.PadRight(10)}" +
-                                  //$"{asset.PurchasePrice.ToString().PadRight(15)}" +
                                   $"{asset.GetCurrentValueInUSD().ToString().PadRight(20)}" 
-                                 // $"{asset.GetCurrentValueInLocalCurrency().ToString().PadRight(20)}"
                                   );
 
                 Console.ResetColor();
